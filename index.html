@@ -129,6 +129,55 @@
     @media(max-width:980px){.hero-grid,.feature-band,.form-shell,.footer-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.footer-actions{justify-content:flex-start}.hero{padding-top:34px}.clean-wall-full{min-height:430px}.pup{min-height:130px}}
     @media(max-width:670px){.topline{font-size:12px}.brand span{display:none}.nav{align-items:flex-start}.nav-actions .hide-mobile{display:none}.hero-grid{gap:22px}.trust-row,.cards,.features,.process,.grid2,.grid3,.checks{grid-template-columns:1fr}.wall-card{border-radius:30px;padding:14px}.pup-grid{gap:8px}.pup{min-height:108px;border-radius:18px}.wall-caption{align-items:flex-start;flex-direction:column}.form-shell{border-radius:28px;padding:12px}form{padding:16px;border-radius:24px}.floating-paw{left:15px;right:15px;bottom:16px}.floating-paw .btn{width:100%}.clientcapture-mark{display:none}h1{font-size:46px}.hero p{font-size:17px}}
   </style>
+
+  <style>
+    .terms-card{
+      background:linear-gradient(135deg,rgba(244,210,216,.34),rgba(255,253,249,.98));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:14px 15px;
+      margin:4px 0 14px;
+    }
+    .terms-card details{margin:0 0 10px}
+    .terms-card summary{
+      cursor:pointer;
+      color:var(--wine);
+      font-weight:950;
+      list-style:none;
+    }
+    .terms-card summary::-webkit-details-marker{display:none}
+    .terms-card summary:after{content:" +";font-weight:950;color:var(--berry)}
+    .terms-card details[open] summary:after{content:" –"}
+    .terms-copy{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+      background:#fff;
+      border:1px dashed rgba(141,47,63,.24);
+      border-radius:16px;
+      padding:12px;
+    }
+    .terms-copy p{margin:0 0 8px}
+    .terms-copy ul{margin:8px 0 0 18px;padding:0}
+    .terms-copy li{margin:5px 0}
+    .terms-consent{margin:0;color:#4d403d}
+    .footer-powered{
+      margin-top:12px;
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      border-radius:999px;
+      padding:8px 11px;
+      font-size:12px;
+      font-weight:950;
+      letter-spacing:.04em;
+    }
+    .clientcapture-mark{letter-spacing:.04em;text-transform:none}
+  </style>
 </head>
 <body id="top">
   <div class="topline">🐾 Clean Pup Wall + smart booking enquiry for <strong>Ellie-Mae’s Dog Grooming</strong> — no vague messages, just clear details.</div>
@@ -291,6 +340,23 @@
           </div>
           <div class="field full"><label for="notes">Extra notes</label><textarea id="notes" name="notes" placeholder="Matting, allergies, skin issues, nervousness, previous groom date, preferred style, anything Ellie-Mae should know..."></textarea></div>
           <label class="consent"><input type="checkbox" required /> <span>I understand this will open WhatsApp with my enquiry ready to send to Ellie-Mae’s Dog Grooming.</span></label>
+
+          <div class="terms-card">
+            <details>
+              <summary>🐾 Read Ellie-Mae’s booking T&amp;Cs</summary>
+              <div class="terms-copy">
+                <!-- Paste Ellie-Mae’s full Google Docs T&Cs here, or replace these simple starter points. -->
+                <p><strong>Ellie-Mae’s Dog Grooming T&amp;Cs:</strong> Full booking terms can be added here from Ellie-Mae’s Google Doc.</p>
+                <ul>
+                  <li>Owners should provide accurate coat, health, temperament and contact details before booking.</li>
+                  <li>Severely matted coats, nervous/reactive dogs, late arrivals or missed appointments may affect timing, price or appointment suitability.</li>
+                  <li>Ellie-Mae’s will confirm final availability, service suitability and any pricing changes before the appointment is agreed.</li>
+                </ul>
+              </div>
+            </details>
+            <label class="consent terms-consent"><input id="termsAccepted" type="checkbox" required /> <span>I confirm I have read and agree to Ellie-Mae’s Dog Grooming T&amp;Cs before submitting this enquiry.</span></label>
+          </div>
+
           <div class="submit-row">
             <button class="btn primary" type="submit">Send to WhatsApp</button>
             <a class="btn ghost" href="tel:+447398126687">Call instead</a>
@@ -306,7 +372,7 @@
       <div>
         <b>Ellie-Mae’s Dog Grooming</b>
         <p>Westbury on Severn, Gloucester, GL14 1ND. Grooming, teeth cleaning, microchipping, Animal Reiki and more.</p>
-        <div class="preview-note">ClientCapture preview build — remove this line if deploying as the client’s live page.</div>
+        <div class="footer-powered">⚡ Powered by Client Capture</div>
       </div>
       <div class="footer-actions">
         <a class="btn ghost" href="https://wa.me/447398126687?text=Hi%20Ellie-Mae%E2%80%99s%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
@@ -316,7 +382,7 @@
     </div>
   </footer>
 
-  <div class="clientcapture-mark">ClientCapture preview</div>
+  <div class="clientcapture-mark">Powered by Client Capture</div>
   <div class="floating-paw"><a class="btn primary" href="#enquiry">🐾 Enquire now</a></div>
 
   <script>
